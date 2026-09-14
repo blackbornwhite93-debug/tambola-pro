@@ -1,0 +1,82 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #0f172a;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1, h2 { color: #f59e0b; margin-bottom: 5px; }
+#current-number {
+    font-size: 4.5rem;
+    font-weight: bold;
+    background-color: #1e293b;
+    padding: 15px 40px;
+    border-radius: 12px;
+    border: 3px solid #f59e0b;
+    margin: 15px 0;
+    text-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+}
+button {
+    background-color: #d97706;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+.board-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 6px;
+    max-width: 100%;
+    background-color: #1e293b;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+.board-cell {
+    background-color: #334155;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+.board-cell.called {
+    background-color: #10b981 !important;
+    box-shadow: 0 0 6px #10b981;
+}
+.ticket-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 2px;
+    background-color: #64748b;
+    padding: 4px;
+    border-radius: 4px;
+}
+.ticket-cell {
+    background-color: #ffffff;
+    color: #0f172a;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.ticket-cell:empty { background-color: #cbd5e1; }
+.ticket-cell.marked {
+    background-color: #ef4444 !important;
+    color: #ffffff !important;
+    text-decoration: line-through;
+}
